@@ -77,23 +77,9 @@ for i in forecast_set:
     next_date = datetime.datetime.fromtimestamp(next_unix)
     next_unix += 86400
     df.loc[next_date] = [np.nan for _ in range(len(df.columns) - 1)] + [i]
-
 print(df.tail())
 
 df['Close'].plot()
 df['Forecast'].plot()
 plt.show()
 
-"""
-svm
-for k in ['linear','poly','rbf','sigmoid']:
-    clf2 = svm.SVR(k)
-    clf2.fit(X_train,y_train)
-    accuracy2 = clf2.score(X_test,y_test)
-    print(accuracy2)
-"""
-"""
-clf3 = svm.SVC(kernel='linear',C=1)
-scores = cross_val_score(clf3,X,y,cv=5,scoring='f1_macro')
-print(scores)
-"""

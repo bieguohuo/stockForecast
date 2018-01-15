@@ -57,18 +57,18 @@ def load():
                         # print("序号：%s   值：%s" % (v.index(i) + 1, i))
                         for x, y in i.items():
                             if x == 'event':
-                                print 'list:', x, ':', y
+                                print('list:', x, ':', y)
                                 for u in y:
                                     for a, o in u.items():
-                                        print x, '-', v, ':', o
+                                        print(x, '-', v, ':', o)
                                         if a == 'type':
                                             sheet[list.index(e) + 1].write(v.index(i) + 1, 28, o)
                                         if a == 'desc':
                                             sheet[list.index(e) + 1].write(v.index(i) + 1, 29, o)
                             elif type(y) == dict:
-                                print 'dict:', x, ':', y
+                                print('dict:', x, ':', y)
                                 for z, w in y.items():
-                                    print x, '-', z, ':', w
+                                    print(x, '-', z, ':', w)
                                     if x == 'kline':
                                         if z == 'open':
                                             sheet[list.index(e) + 1].write(v.index(i) + 1, 1, w)
@@ -131,7 +131,7 @@ def load():
                                         if z == 'rsi1':
                                             sheet[list.index(e) + 1].write(v.index(i) + 1, 27, w)
                             else:
-                                print x, ':', y
+                                print(x, ':', y)
                                 sheet[list.index(e) + 1].write(v.index(i) + 1, 0, y)
                                 # print x,':',y
                                 # print("data[%s]=" % k,v)
