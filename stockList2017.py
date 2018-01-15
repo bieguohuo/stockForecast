@@ -9,7 +9,7 @@ from sklearn.preprocessing import MinMaxScaler
 
 min_max = MinMaxScaler(feature_range=(0, 1))
 # 读取数据
-stock = pd.read_excel('stockList2017-class.xls', sheet_name=[0])[0]
+stock = pd.read_excel('./data/stockList2017-class.xls', sheet_name=[0])[0]
 
 # 删去无用的特征
 del stock['date']
